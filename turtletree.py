@@ -12,6 +12,9 @@ def draw_tree(branch_length, left_angle, right_angle, depth, reduction_factor):
     # Draw the main branch
     turtle.forward(branch_length)
     
+    # Adjust thickness based on depth
+    turtle.pensize(depth)
+    
     # Draw the left subtree
     turtle.left(left_angle)
     draw_tree(branch_length * reduction_factor, left_angle, right_angle, depth - 1, reduction_factor)
