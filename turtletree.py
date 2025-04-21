@@ -4,6 +4,11 @@ def draw_tree(branch_length, left_angle, right_angle, depth, reduction_factor):
     if depth == 0:
         return
     
+    #color given to the tree.
+    if depth > 2:
+        turtle.pencolor("brown")
+    else:
+        turtle.pencolor("green")
     # Draw the main branch
     turtle.forward(branch_length)
     
